@@ -1,181 +1,106 @@
-🎨 Frontend Developer Assignment – Quiz Application
+Frontend Developer Assignment – Quiz Application
 
-A fully responsive, pixel-perfect quiz interface built using React, TypeScript, Vite, and Tailwind CSS.
-This project is created as part of a Frontend Developer Assignment, following the provided Figma design and prototype with high accuracy.
+A pixel-perfect, responsive quiz application built using React + TypeScript + Vite and styled with TailwindCSS.
+The design closely matches the provided Figma file and implements smooth navigation and modular code architecture.
 
 🚀 Live Demo
 
-🔗 Live URL: To be added after Vercel deployment
-🔗 GitHub Repository: https://github.com/rithvikkaki/frontend-quiz-app
+🔗 https://frontend-quiz-app-delta.vercel.app/
 
-📌 Project Overview
+📂 GitHub Repository
 
-This is a multi-question quiz application where the user:
+🔗 https://github.com/rithvikkaki/frontend-quiz-app
 
-Reads a question
+🧰 Tech Stack Used
 
-Selects an option
+React (TypeScript)
 
-Navigates between questions using Next/Prev
+Vite – for fast development and optimized builds
 
-Views a progress bar
+TailwindCSS – for utility-first, responsive styling
 
-Gets a final score screen at the end
+ESLint + TypeScript Config – clean code & type-safety
 
-All UI elements, spacing, typography, and styling are created to match the Figma design as closely as possible.
+Vercel – deployment
 
-🛠 Tech Stack
-Category	Technology
-Framework	React 18 + TypeScript
-Build Tool	Vite
-Styling	Tailwind CSS
-Animations	CSS transitions (Framer Motion optional)
-Deployment	Vercel
-State Mgmt	React useState
-🎯 Key Features Implemented
-✅ Pixel-Perfect Implementation
+✨ Key Features Implemented
+✔ Pixel-Perfect UI Matching Figma
 
-Layout, spacing, sizes, shadows, and rounding based on Figma specifications
+Font sizes, spacing, colors, gradients, and layout fully match the design
 
-Accurate typography and color scheme
+Buttons, progress bar, background bubble image — all aligned with the Figma visuals
 
-Proper reusable components
+Cat animation and decorative graphics included
 
-✅ Interactive Quiz Flow
+✔ Fully Functional Quiz Flow
 
-Stores selected answers
+Next / Previous navigation
 
-Disables “Next” until an option is selected
+Answer selection
 
-Allows “Previous” navigation
+Result screen
 
-Shows a final score at the end
+Disabled button state when no more navigation is possible
 
-✅ Progress Indicator
+Smooth animations and interactions
 
-Smooth progress bar animation
+✔ Modular & Maintainable Code
 
-Percentage updates in real-time
+QuestionCard.tsx handles UI + interactions
 
-✅ Accessibility
+questions.ts contains quiz data
 
-Semantic HTML tags
+Clean component structure using TypeScript interfaces
 
-Keyboard-accessible buttons
+Strong typing for safer development
 
-High-contrast text
+✔ Responsive Design
 
-ARIA friendly labels
+Works on mobile, tablet, and desktop
 
-✅ Clean Code & Architecture
+Layout adapts smoothly to different screen sizes
 
-Modular component structure:
-
-QuestionCard
-
-ProgressBar
-
-NavigationButtons
-
-Result
-
-Quiz
-
-TypeScript types for safer code
-
-All assets organized in folders
-
-📁 Folder Structure
-frontend/
-│── public/
-│── src/
-│   ├── assets/
-│   │   ├── cat-paw.png
-│   │   ├── bubble.jpg
-│   │   └── ...
-│   ├── components/
-│   │   ├── ProgressBar.tsx
-│   │   ├── QuestionCard.tsx
-│   │   ├── NavigationButtons.tsx
-│   │   ├── Result.tsx
-│   │   └── Quiz.tsx
-│   ├── data/
-│   │   └── questions.ts
-│   ├── App.tsx
-│   ├── main.tsx
-│   ├── index.css
-│── README.md
-│── package.json
-│── tailwind.config.js
-└── vite.config.ts
-
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
+📦 Project Setup Instructions
+1️⃣ Clone the repository
 git clone https://github.com/rithvikkaki/frontend-quiz-app.git
-cd frontend-quiz-app/frontend
+cd frontend-quiz-app
 
-2️⃣ Install Dependencies
+2️⃣ Install dependencies
 npm install
 
-3️⃣ Run Development Server
+3️⃣ Run the app locally
 npm run dev
 
-
-App runs at:
-
-👉 http://localhost:5173/
-
-4️⃣ Build for Production
+4️⃣ Build for production
 npm run build
 
-🌐 Deployment Instructions (Vercel)
-1️⃣ Go to https://vercel.com
-2️⃣ Login with GitHub
-3️⃣ Import Repository
+📝 Assumptions Made
 
-Choose:
+Quiz data provided is static and stored locally
 
-frontend-quiz-app
+No backend API was required for this assignment
 
-4️⃣ Set correct root directory:
-frontend
+The UI strictly followed the Figma reference provided
 
-5️⃣ Build Settings
-Framework: Vite
-Build Command: npm run build
-Output Directory: dist
-
-6️⃣ Click Deploy
-
-You will get a live URL.
-Add that URL at the top of this README.
-
-🧠 Assumptions Made
-
-Only desktop layout required (as per assignment)
-
-Questions are static (no API integration needed)
-
-Used local state for simplicity
-
-Tailwind used for styling instead of styled-components / CSS modules
+Only necessary features were implemented (no timer, scoring weights, or difficulty levels)
 
 ⏱ Time Spent
-Task	Hours
-Understanding Figma & setup	1 hr
-React + Tailwind component structure	2 hrs
-Quiz logic & navigation	1.5 hrs
-Styling + pixel-perfect tweaks	2 hrs
-Testing + debugging	1 hr
-Deployment + documentation	1 hr
 
-Total: ~8–9 hours
+Approximately 6–8 hours, including:
 
-📸 Screenshots (Optional)
+Understanding UI & mapping Figma specs
 
-(Add screenshots of your final UI here after deployment)
+Coding React components
 
-👤 Author
+Styling with TailwindCSS
+
+Handling navigation logic
+
+Deployment on Vercel
+
+Final polishing & cleanup
+
+🙌 Author
 
 Rithvik Kaki
-GitHub: https://github.com/rithvikkaki
+Frontend Developer (Assignment Submission)
