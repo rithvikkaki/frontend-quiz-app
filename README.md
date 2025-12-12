@@ -1,78 +1,181 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+🎨 Frontend Developer Assignment – Quiz Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive, pixel-perfect quiz interface built using React, TypeScript, Vite, and Tailwind CSS.
+This project is created as part of a Frontend Developer Assignment, following the provided Figma design and prototype with high accuracy.
 
-Currently, two official plugins are available:
+🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 Live URL: To be added after Vercel deployment
+🔗 GitHub Repository: https://github.com/rithvikkaki/frontend-quiz-app
 
-## React Compiler
+📌 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is a multi-question quiz application where the user:
 
-## Expanding the ESLint configuration
+Reads a question
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Selects an option
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Navigates between questions using Next/Prev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Views a progress bar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Gets a final score screen at the end
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+All UI elements, spacing, typography, and styling are created to match the Figma design as closely as possible.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠 Tech Stack
+Category	Technology
+Framework	React 18 + TypeScript
+Build Tool	Vite
+Styling	Tailwind CSS
+Animations	CSS transitions (Framer Motion optional)
+Deployment	Vercel
+State Mgmt	React useState
+🎯 Key Features Implemented
+✅ Pixel-Perfect Implementation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
-# frontend-quiz-app
-Frontend Developer Assignment – Quiz Application
->>>>>>> e9c817362a6cbda50c640dff1724e6f7a2a8acf4
+Layout, spacing, sizes, shadows, and rounding based on Figma specifications
+
+Accurate typography and color scheme
+
+Proper reusable components
+
+✅ Interactive Quiz Flow
+
+Stores selected answers
+
+Disables “Next” until an option is selected
+
+Allows “Previous” navigation
+
+Shows a final score at the end
+
+✅ Progress Indicator
+
+Smooth progress bar animation
+
+Percentage updates in real-time
+
+✅ Accessibility
+
+Semantic HTML tags
+
+Keyboard-accessible buttons
+
+High-contrast text
+
+ARIA friendly labels
+
+✅ Clean Code & Architecture
+
+Modular component structure:
+
+QuestionCard
+
+ProgressBar
+
+NavigationButtons
+
+Result
+
+Quiz
+
+TypeScript types for safer code
+
+All assets organized in folders
+
+📁 Folder Structure
+frontend/
+│── public/
+│── src/
+│   ├── assets/
+│   │   ├── cat-paw.png
+│   │   ├── bubble.jpg
+│   │   └── ...
+│   ├── components/
+│   │   ├── ProgressBar.tsx
+│   │   ├── QuestionCard.tsx
+│   │   ├── NavigationButtons.tsx
+│   │   ├── Result.tsx
+│   │   └── Quiz.tsx
+│   ├── data/
+│   │   └── questions.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│── README.md
+│── package.json
+│── tailwind.config.js
+└── vite.config.ts
+
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/rithvikkaki/frontend-quiz-app.git
+cd frontend-quiz-app/frontend
+
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Run Development Server
+npm run dev
+
+
+App runs at:
+
+👉 http://localhost:5173/
+
+4️⃣ Build for Production
+npm run build
+
+🌐 Deployment Instructions (Vercel)
+1️⃣ Go to https://vercel.com
+2️⃣ Login with GitHub
+3️⃣ Import Repository
+
+Choose:
+
+frontend-quiz-app
+
+4️⃣ Set correct root directory:
+frontend
+
+5️⃣ Build Settings
+Framework: Vite
+Build Command: npm run build
+Output Directory: dist
+
+6️⃣ Click Deploy
+
+You will get a live URL.
+Add that URL at the top of this README.
+
+🧠 Assumptions Made
+
+Only desktop layout required (as per assignment)
+
+Questions are static (no API integration needed)
+
+Used local state for simplicity
+
+Tailwind used for styling instead of styled-components / CSS modules
+
+⏱ Time Spent
+Task	Hours
+Understanding Figma & setup	1 hr
+React + Tailwind component structure	2 hrs
+Quiz logic & navigation	1.5 hrs
+Styling + pixel-perfect tweaks	2 hrs
+Testing + debugging	1 hr
+Deployment + documentation	1 hr
+
+Total: ~8–9 hours
+
+📸 Screenshots (Optional)
+
+(Add screenshots of your final UI here after deployment)
+
+👤 Author
+
+Rithvik Kaki
+GitHub: https://github.com/rithvikkaki
