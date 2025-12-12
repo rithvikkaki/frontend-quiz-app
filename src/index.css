@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-serif: "DM Serif Display", serif;
+    --font-hand: "Caveat Brush", cursive;
+    --font-sans: "Manrope", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --color-brand-dark: #1e3a5a;
+    --color-brand-primary: #1e4e6b;
+    --color-brand-light: #dcf6fe;
+}

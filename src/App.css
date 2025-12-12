@@ -1,0 +1,338 @@
+/* Main Card */
+.quiz-container {
+  background: white;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Updated shadow */
+  width: 90%;
+  max-width: 900px;
+  padding: 40px 60px;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  /* Changed to visible for cat paw overlap if needed, though 'hidden' often better for slides. Keeping hidden for slides, will position items inside. */
+  overflow: hidden;
+}
+
+/* Header */
+.quiz-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.quiz-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3.5rem;
+  color: #1c1c1c;
+  /* Dark navy updated */
+  font-style: italic;
+}
+
+.quiz-subtitle {
+  color: #889eb5;
+  font-size: 1rem;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.progress-segment {
+  height: 6px;
+  flex: 1;
+  background-color: #e2e8f0;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.progress-segment.active {
+  background-color: var(--primary-color);
+}
+
+/* Question Area */
+.question-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.question-text-box {
+  background-color: var(--accent-color);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Options */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-button {
+  background: white;
+  border: 2px solid transparent;
+  padding: 18px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  text-align: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  /* For checkmark positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option-button:not(:disabled):hover {
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+}
+
+.option-button:disabled {
+  cursor: default;
+  opacity: 0.8;
+}
+
+/* FEEDBACK STATES */
+.option-button.correct {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+  color: #15803d;
+}
+
+.option-button.wrong {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.option-button.dimmed {
+  opacity: 0.5;
+}
+
+.checkmark-icon {
+  margin-left: 10px;
+  color: #15803d;
+  font-weight: bold;
+}
+
+/* Content Navigation */
+.navigation-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.nav-btn {
+  background: #e0f2fe;
+  color: #0c4a6e;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: #bae6fd;
+  transform: scale(1.05);
+  /* Added hover scale */
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Result Screen */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 60px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.keep-learning {
+  background: #f1f5f9;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.final-score-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.score-percentage {
+  font-family: 'DM Serif Display', serif;
+  font-size: 8rem;
+  color: #0f766e;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.score-percentage span {
+  font-size: 4rem;
+  vertical-align: super;
+}
+
+.restart-btn {
+  background: linear-gradient(to right, #dcfce7, #dbeafe);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.restart-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Cat Paw Decoration */
+.cat-decoration-container {
+  position: absolute;
+  bottom: -30px;
+  left: -40px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.cat-paw {
+  width: 150px;
+  /* Set transform-origin to bottom left for the 'wave' pivot */
+  transform-origin: bottom left;
+  animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* Speech Bubble */
+.speech-bubble {
+  position: absolute;
+  top: -60px;
+  left: 80px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: #334155;
+  white-space: nowrap;
+  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: white transparent;
+  display: block;
+  width: 0;
+}
+
+@media (max-width: 600px) {
+  .quiz-title {
+    font-size: 2.5rem;
+  }
+
+  .score-percentage {
+    font-size: 5rem;
+  }
+
+  .quiz-container {
+    padding: 30px 20px;
+    width: 95%;
+    overflow: hidden;
+  }
+
+  /* Ensure hidden on mobile */
+  .navigation-buttons {
+    justify-content: center;
+  }
+
+  .cat-paw {
+    width: 100px;
+  }
+
+  .cat-decoration-container {
+    bottom: -20px;
+    left: -20px;
+  }
+
+  .speech-bubble {
+    left: 50px;
+    top: -50px;
+    font-size: 0.8rem;
+  }
+}
